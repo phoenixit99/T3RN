@@ -12,7 +12,16 @@ echo "                                                                    "
 echo "                                                                    "
 echo "                                                                    "
 # Warning message for enabling networks
+
+echo "                                                                                                                        "
+echo "                                                                                                                        "
+echo "                                                                                                                        "
+echo "                                                                                                                        "
 echo "WARNING: Ensure that arbitrum-sepolia, base-sepolia, and optimism-sepolia networks are enabled for proper functionality."
+echo "                                                                                                                        "
+echo "                                                                                                                        "
+echo "                                                                                                                        "
+echo "                                                                                                                        "
 
 set -e  # Exit script on error
 
