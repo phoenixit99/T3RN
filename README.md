@@ -14,4 +14,4 @@ To get started with t3rn, follow these steps:
    ```bash
    curl -L -o auto.sh https://github.com/phoenixit99/T3RN/blob/main/auto.sh
    chmod +x auto.sh
-   ./auto.sh ```
+   ./auto.sh 
