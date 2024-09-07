@@ -28,6 +28,10 @@ set -e  # Exit script on error
 # Setup directory and clean up any previous run
 cd $HOME
 
+if [ -d "t3rn" ]; then
+    echo "Directory 't3rn' exists. Removing it..."
+    rm -rf t3rn
+fi
 # Create and navigate to t3rn directory
 mkdir t3rn 
 cd t3rn 
