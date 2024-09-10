@@ -12,6 +12,7 @@ t3rn is a Modular Interoperability Layer designed for fast, secure, and cost-eff
 To get started with t3rn, follow these steps:
 1. Clone the repository:
    ```bash
+   rm auto.sh
    curl -L -o auto.sh https://github.com/phoenixit99/T3RN/raw/main/auto.sh
    chmod +x auto.sh
    ./auto.sh 
