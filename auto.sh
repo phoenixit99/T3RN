@@ -50,7 +50,7 @@ export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
 export PRIVATE_KEY_LOCAL=$privatekey
-export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
 
 # Run the executor
