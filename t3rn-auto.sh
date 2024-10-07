@@ -1,12 +1,16 @@
 #!/bin/bash
-echo "
-███    ██  ██████  ██████  ███████ ██████   █████     ████████  ██████  ██████  
-████   ██ ██    ██ ██   ██ ██           ██ ██   ██       ██    ██    ██ ██   ██ 
-██ ██  ██ ██    ██ ██   ██ █████    █████   ██████       ██    ██    ██ ██████  
-██  ██ ██ ██    ██ ██   ██ ██           ██      ██       ██    ██    ██ ██      
-██   ████  ██████  ██████  ███████ ██████   █████  ██    ██     ██████  ██      "
-# Warning message for enabling networks
-sleep 3
+echo "                                                                    "
+echo "                                                                    "
+echo "                                                                    "
+echo "                                                                    "
+echo "  H   H  EEEEE  N   N  RRRR   Y    Y     N   N  OOO   DDDD   EEEEE  "
+echo "  H   H  E      NN  N  R   R    Y Y      NN  N O   O  D   D  E      "
+echo "  HHHHH  EEEE   N N N  RRRR      Y       N N N O   O  D   D  EEEE   "
+echo "  H   H  E      N  NN  R  R      Y       N  NN O   O  D   D  E      "
+echo "  H   H  EEEEE  N   N  R   R     Y       N   N  OOO   DDDD   EEEEE  "
+echo "                                                                    "
+echo "                                                                    "
+echo "                                                                    "
 echo "                                                                                                                        "
 echo "                                                                                                                        "
 echo "                                                                                                                        "
@@ -33,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.21.5/executor-linux-v0.21.5.tar.gz
-tar -xf executor-linux-v0.21.5.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.21.6/executor-linux-v0.21.6.tar.gz
+tar -xf executor-linux-v0.21.6.tar.gz
 
 # Prompt user for private key
 
