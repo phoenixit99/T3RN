@@ -62,8 +62,6 @@ RestartSec=3
 Environment="NODE_ENV=testnet"
 Environment="LOG_LEVEL=debug"
 Environment="LOG_PRETTY=false"
-Environment="EXECUTOR_PROCESS_CLAIMS=true"
-Environment="EXECUTOR_PROCESS_ORDERS=false"
 Environment="PRIVATE_KEY_LOCAL=$privatekey"
 Environment="ENABLED_NETWORKS=arbitrum-sepolia,blast-sepolia,base-sepolia,optimism-sepolia,l1rn"
 
