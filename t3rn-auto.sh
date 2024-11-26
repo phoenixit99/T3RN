@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.22.0/executor-linux-v0.22.0.tar.gz
-tar -xf executor-linux-v0.22.0.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.24.1/executor-linux-v0.24.1.tar.gz
+tar -xf executor-linux-v0.24.1.tar.gz
 
 # Prompt user for private key
 
