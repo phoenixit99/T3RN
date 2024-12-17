@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.24.1/executor-linux-v0.24.1.tar.gz
-tar -xf executor-linux-v0.24.1.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.24.1/executor-linux-v0.27.0.tar.gz
+tar -xf executor-linux-v0.27.0.tar.gz
 
 # Prompt user for private key
 
@@ -80,7 +80,7 @@ sudo systemctl enable t3rnd
 sudo systemctl restart t3rnd
 sudo journalctl -u t3rnd -f -o cat
 
-echo "Version 0.21.4"
+echo "Version 0.27.0"
 echo "Check log: sudo journalctl -u t3rnd -f -o cat"
 echo "Restart: sudo systemctl restart t3rnd"
 echo "Stop: sudo systemctl stop t3rnd"
