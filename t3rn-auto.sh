@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.24.1/executor-linux-v0.27.0.tar.gz
-tar -xf executor-linux-v0.27.0.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.47.0/executor-linux-v0.47.0.tar.gz
+tar -xf executor-linux-v0.47.0.tar.gz
 
 # Prompt user for private key
 
@@ -63,13 +63,14 @@ Environment="NODE_ENV=testnet"
 Environment="LOG_LEVEL=debug"
 Environment="LOG_PRETTY=false"
 Environment="PRIVATE_KEY_LOCAL=$privatekey"
-#Environment="EXECUTOR_PROCESS_CLAIMS=true"
-#Environment="EXECUTOR_PROCESS_ORDERS=false"
+Environment="EXECUTOR_PROCESS_BIDS_ENABLED=true"
+Environment="EXECUTOR_PROCESS_ORDERS_ENABLED=true"
+Environment="EXECUTOR_PROCESS_CLAIMS_ENABLED=true"
 Environment="ENABLED_NETWORKS=arbitrum-sepolia,blast-sepolia,base-sepolia,optimism-sepolia,l1rn"
-#Environment="RPC_ENDPOINTS_BSSP=https://sepolia.base.org"
-#Environment="RPC_ENDPOINTS_BLSS=https://sepolia.blast.io"
-#Environment="RPC_ENDPOINTS_ARBT=https://public.stackup.sh/api/v1/node/arbitrum-sepolia"
-#Environment="RPC_ENDPOINTS_OPSP=https://optimism-sepolia.drpc.org"
+Environment="RPC_ENDPOINTS_BSSP=https://sepolia.base.org"
+Environment="RPC_ENDPOINTS_BLSS=https://sepolia.blast.io"
+Environment="RPC_ENDPOINTS_ARBT=https://public.stackup.sh/api/v1/node/arbitrum-sepolia"
+Environment="RPC_ENDPOINTS_OPSP=https://optimism-sepolia.drpc.org"
 
 [Install]                     
 WantedBy=multi-user.target   
