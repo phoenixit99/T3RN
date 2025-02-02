@@ -69,7 +69,7 @@ Environment="EXECUTOR_PROCESS_CLAIMS_ENABLED=true"
 Environment="ENABLED_NETWORKS=arbitrum-sepolia,blast-sepolia,base-sepolia,optimism-sepolia,l1rn"
 Environment="RPC_ENDPOINTS_BSSP=https://sepolia.base.org"
 Environment="RPC_ENDPOINTS_BLSS=https://sepolia.blast.io"
-Environment="RPC_ENDPOINTS_ARBT=https://public.stackup.sh/api/v1/node/arbitrum-sepolia"
+Environment="RPC_ENDPOINTS_ARBT=https://arbitrum-sepolia-rpc.publicnode.com,https://sepolia-rollup.arbitrum.io/rpc"
 Environment="RPC_ENDPOINTS_OPSP=https://optimism-sepolia.drpc.org"
 
 [Install]                     
