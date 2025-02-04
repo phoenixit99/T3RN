@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.47.0/executor-linux-v0.47.0.tar.gz
-tar -xf executor-linux-v0.47.0.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.48.0/executor-linux-v0.48.0.tar.gz
+tar -xf executor-linux-v0.48.0.tar.gz
 
 # Prompt user for private key
 
@@ -60,6 +60,7 @@ ExecStart=/root/t3rn/executor/executor/bin/executor
 Restart=always
 RestartSec=3
 Environment="NODE_ENV=testnet"
+Environment="testnet"
 Environment="LOG_LEVEL=debug"
 Environment="LOG_PRETTY=false"
 Environment="PRIVATE_KEY_LOCAL=$privatekey"
