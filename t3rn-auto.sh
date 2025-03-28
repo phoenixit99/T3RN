@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.48.0/executor-linux-v0.48.0.tar.gz
-tar -xf executor-linux-v0.48.0.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.59.0/executor-linux-v0.59.0.tar.gz
+tar -xf executor-linux-v0.59.0.tar.gz
 
 # Prompt user for private key
 
@@ -59,23 +59,41 @@ WorkingDirectory=/root/t3rn/executor/executor/bin
 ExecStart=/root/t3rn/executor/executor/bin/executor
 Restart=always
 RestartSec=3
-Environment="NODE_ENV=testnet"
-Environment="testnet"
-Environment="LOG_LEVEL=debug"
-Environment="LOG_PRETTY=false"
-Environment="PRIVATE_KEY_LOCAL=$privatekey"
-Environment="EXECUTOR_PROCESS_BIDS_ENABLED=true"
-Environment="EXECUTOR_PROCESS_ORDERS_ENABLED=true"
-Environment="EXECUTOR_PROCESS_CLAIMS_ENABLED=true"
-Environment="ENABLED_NETWORKS=arbitrum-sepolia,blast-sepolia,base-sepolia,optimism-sepolia,l1rn"
-Environment="RPC_ENDPOINTS_BSSP=https://sepolia.base.org"
-Environment="RPC_ENDPOINTS_BLSS=https://sepolia.blast.io"
-Environment="RPC_ENDPOINTS_ARBT=https://arbitrum-sepolia-rpc.publicnode.com,https://sepolia-rollup.arbitrum.io/rpc"
-Environment="RPC_ENDPOINTS_OPSP=https://optimism-sepolia.drpc.org"
 
-[Install]                     
-WantedBy=multi-user.target   
-EOF
+Environment="PROMETHEUS_PORT=9099"
+
+Environment="ENVIRONMENT=testnet"
+
+Environment="LOG_LEVEL=debug"
+
+Environment="LOG_PRETTY=false"
+
+Environment="EXECUTOR_PROCESS_CLAIMS_ENABLED=true"
+
+Environment="EXECUTOR_PROCESS_ORDERS_ENABLED=true"
+
+Environment="EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false"
+
+Environment="EXECUTOR_ENABLE_BATCH_BIDING=true"
+
+Environment="EXECUTOR_PROCESS_BIDS_ENABLED=true"
+
+Environment="EXECUTOR_PROCESS_ORDERS_API_ENABLED=false"
+
+Environment="EXECUTOR_MAX_L3_GAS_PRICE=100"
+
+Environment="PRIVATE_KEY_LOCAL=$privatekey"
+
+Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia"
+
+Environment="RPC_ENDPOINTS_L2RN=https://b2n.rpc.caldera.xyz/http"
+Environment="RPC_ENDPOINTS_ARBT=https://arbitrum-sepolia.drpc.org,https://sepolia-rollup.arbitrum.io/rpc"
+Environment="RPC_ENDPOINTS_BAST=https://base-sepolia-rpc.publicnode.com,https://base-sepolia.drpc.org"
+Environment="RPC_ENDPOINTS_OPST=https://sepolia.optimism.io,https://optimism-sepolia.drpc.org"
+Environment="RPC_ENDPOINTS_UNIT=https://unichain-sepolia.drpc.org,https://sepolia.unichain.org"
+
+[Install]
+WantedBy=multi-user.target
 
 sudo systemctl daemon-reload
 sudo systemctl enable t3rnd
