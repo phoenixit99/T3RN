@@ -94,6 +94,7 @@ Environment="RPC_ENDPOINTS_UNIT=https://unichain-sepolia.drpc.org,https://sepoli
 
 [Install]
 WantedBy=multi-user.target
+EOF
 
 sudo systemctl daemon-reload
 sudo systemctl enable t3rnd
