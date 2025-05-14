@@ -91,7 +91,7 @@ Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2r
 # Environment="RPC_ENDPOINTS_BAST=https://base-sepolia-rpc.publicnode.com,https://base-sepolia.drpc.org"
 # Environment="RPC_ENDPOINTS_OPST=https://sepolia.optimism.io,https://optimism-sepolia.drpc.org"
 # Environment="RPC_ENDPOINTS_UNIT=https://unichain-sepolia.drpc.org,https://sepolia.unichain.org"
-Environment = "RPC_ENDPOINTS='{
+Environment = "RPC_ENDPOINTS={
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
     "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
@@ -99,7 +99,7 @@ Environment = "RPC_ENDPOINTS='{
     "mont": ["https://testnet-rpc.monad.xyz"],
     "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
     "unit": ["https://unichain-sepolia.drpc.org", "https://sepolia.unichain.org"]
-}'"
+}"
 [Install]
 WantedBy=multi-user.target
 EOF
