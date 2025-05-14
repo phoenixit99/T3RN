@@ -37,8 +37,8 @@ mkdir t3rn
 cd t3rn 
 
 # Download and extract executor
-wget https://github.com/t3rn/executor-release/releases/download/v0.59.0/executor-linux-v0.59.0.tar.gz
-tar -xf executor-linux-v0.59.0.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.59.0/executor-linux-v0.78.1.tar.gz
+tar -xf executor-linux-v0.78.1.tar.gz
 
 # Prompt user for private key
 
@@ -84,14 +84,22 @@ Environment="EXECUTOR_MAX_L3_GAS_PRICE=100"
 
 Environment="PRIVATE_KEY_LOCAL=$privatekey"
 
-Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia"
+Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia,eth,t3eth,t3mon,t3sei,mon,sei"
 
-Environment="RPC_ENDPOINTS_L2RN=https://b2n.rpc.caldera.xyz/http"
-Environment="RPC_ENDPOINTS_ARBT=https://arbitrum-sepolia.drpc.org,https://sepolia-rollup.arbitrum.io/rpc"
-Environment="RPC_ENDPOINTS_BAST=https://base-sepolia-rpc.publicnode.com,https://base-sepolia.drpc.org"
-Environment="RPC_ENDPOINTS_OPST=https://sepolia.optimism.io,https://optimism-sepolia.drpc.org"
-Environment="RPC_ENDPOINTS_UNIT=https://unichain-sepolia.drpc.org,https://sepolia.unichain.org"
-
+# Environment="RPC_ENDPOINTS_L2RN=https://b2n.rpc.caldera.xyz/http"
+# Environment="RPC_ENDPOINTS_ARBT=https://arbitrum-sepolia.drpc.org,https://sepolia-rollup.arbitrum.io/rpc"
+# Environment="RPC_ENDPOINTS_BAST=https://base-sepolia-rpc.publicnode.com,https://base-sepolia.drpc.org"
+# Environment="RPC_ENDPOINTS_OPST=https://sepolia.optimism.io,https://optimism-sepolia.drpc.org"
+# Environment="RPC_ENDPOINTS_UNIT=https://unichain-sepolia.drpc.org,https://sepolia.unichain.org"
+Environment = "RPC_ENDPOINTS='{
+    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
+    "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
+    "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
+    "blst": ["https://sepolia.blast.io", "https://blast-sepolia.drpc.org"],
+    "mont": ["https://testnet-rpc.monad.xyz"],
+    "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
+    "unit": ["https://unichain-sepolia.drpc.org", "https://sepolia.unichain.org"]
+}'"
 [Install]
 WantedBy=multi-user.target
 EOF
